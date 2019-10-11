@@ -2,6 +2,7 @@
 
 This is the base repository for COMP110 Worksheet 3.
 
+The flowchart for the flow of the game is in this repository. It is named "terminal_guessing_minigame_flowchart.png[https://github.com/dayluke/comp110-worksheet-3/blob/master/terminal_guessing_minigame_flowchart.png]".
 Below is the psudeocode for the terminal hacking minigame:
 
 ```
