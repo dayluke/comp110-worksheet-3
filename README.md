@@ -4,61 +4,42 @@ This is the base repository for COMP110 Worksheet 3.
 
 The flowchart for the flow of the game is in this repository. Here is the flowchart for the flow of the game:
 ![Flowchart for Terminal Hacking Minigame](terminal_guessing_minigame_flowchart.png)
-Below is the psudeocode for the terminal hacking minigame:
+
+Below is the psudeocode for solving the terminal hacking minigame:
 
 ```
-import random
-
-def setup():
-    word_list = ["TEXT", "TENT", "BENT", "BEAR", "TEAR", "TART", "CART"] ## These words would be randomly generated (e.g. from a dictionary, with a letter count restraint)
-
-    for word in word_list:
-        print(word)
+FUNCTION terminal():
+	
+	WORD_LIST = list of randomly generated, n-letter words
+	
+	RANDOM_WORD = select a random word from WORD_LIST
+	
+	GUESSES = 3
+	
+	PLAYER_WORD = random word from WORD_LIST
+	
+	WHILE GUESSES > 0:
+				
+		IF PLAYER_WORD = RANDOM_WORD:
+			player wins
+			
+		ELSE:
+			GUESSES = GUESSES - 1
+			
+			LIKELINESS = number of letters that are equal in position
+					to both PLAYER_WORD and RANDOM_WORD
+					
+				IF LIKELINESS > 0:
+					SIMILAR_WORDS = list of words that have letter that are also
+						equal in position to both PLAYER_WORD and RANDOM_WORD
+						
+					PLAYER_WORD = random word from SIMILAR_WORDS
+				
+				ELSE:
+					PLAYER_WORD = random word from WORD_LIST
+					
+	player loses
     
-    rand_word_index = random.randint(0, len(word_list) - 1)
-    secret_word = word_list[rand_word_index]
-
-    guess(secret_word)
-
-
-def guess(secret_word):
-    guesses_left = 3
-
-    while guesses_left > 0:
-        player_word = input("Enter word to guess: ").upper()
-
-        if player_word == secret_word:
-            end("win")
-        else:
-            guesses_left -= 1
-            calculate_likeness(secret_word, player_word)
-
-    end("lose")
-
-
-
-def calculate_likeness(s_word, p_word):
-    score = 0
-
-    for i in range(len(s_word)):
-        if s_word[i] == p_word[i]:
-            score += 1
-
-    print("LIKNESS SCORE: %s" % score)
-
-
-
-def end(game_end_state):
-    if game_end_state == win":
-        print("You win, congratulations!")
-    elif game_end_state == "lose":
-        print("You lose, unlucky")
-    else:
-        print("Error")
-
-    exit()
-
-
-setup()
+END FUNCTION
 
 ```
