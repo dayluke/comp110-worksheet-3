@@ -3,7 +3,7 @@
 This is the base repository for COMP110 Worksheet 3.
 
 The flowchart for the flow of the game is in this repository. Here is the flowchart for the flow of the game:
-![Flowchart for Terminal Hacking Minigame](terminal_guessing_minigame_flowchart.png)
+![Flowchart for Terminal Hacking Minigame](comp110-worksheet3-diagram.png)
 
 Below is the psudeocode for solving the terminal hacking minigame:
 
